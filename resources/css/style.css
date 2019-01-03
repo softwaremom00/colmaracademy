@@ -60,8 +60,7 @@ nav img{
 /*** The Main Banner.  This includes the image and the banner-text containers. These
 are side by side in a row flexbox.  */
 
-.container .banner{
-
+.banner{
   background-color: rgb(216,216,216);
   display: flex;
 }
@@ -110,9 +109,46 @@ are side by side in a row flexbox.  */
 
 /**** Next Section - practicing.. another flexbox that consists of keep practicing and Orientation, campus and  Lecture(a column flexbox) ****/
 
+.information{
+ width: 100%;
+ display:flex;
+ justify-content: space-between;
+  border: 2px solid red;
+}
+.information-main{
+  width: 62%;
+  border: 1px solid blue;
+}
+.information-main img{
+  width:95%;
+  margin: 1.5rem 2rem;
+}
 
 
 /** Start Learning Section **/
+.orientation-campus-lecture{
+  display: flex;
+  flex-direction: column;
+  width: 38%;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.orientation{
+  display: flex;
+}
+.orientation img{
+  width: 35%;
+  margin-bottom: 1rem;
+  margin-right: 1.5rem;
+}
+
+.orientation{
+  display: flex;
+}
+
+
+
+
 
 
 
