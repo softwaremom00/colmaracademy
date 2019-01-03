@@ -117,7 +117,9 @@ are side by side in a row flexbox.  */
 
 
 /** Thesis Exhibit Section */
-
+.thesis video{
+  width: 60%;
+}
 
 /*** Reimagine Urban Section .. or bottom quote **/
 
