@@ -283,13 +283,75 @@ are side by side in a row flexbox.  */
 }
 
 
-
-
-
 /** Thesis Exhibit Section */
-.thesis video{
-  width: 60%;
+.thesis{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
 }
+.thesis h1{
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  color: darkslategrey;
+
+}
+.video{
+  width: 60%;
+  margin-left: 1.5rem;
+  margin-right: .75rem;
+  margin-top:0;
+
+}
+.thesis video{
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  background-color: gainsboro;
+}
+.main-content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.thesis-sidebar{
+  width: 40%;
+  margin-left: .75rem;
+}
+.thesis-fisma{
+  display: flex;
+  background-color: gainsboro;
+}
+
+.thesis-now-and-then{
+  display:flex;
+}
+
+.thesis-sidebar img {
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+}
+
+.sidebar-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+}
+
+.sidebar-text h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+.sidebar-text h3{
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: .5rem;
+}
+
+
 
 /*** Reimagine Urban Section .. or bottom quote **/
 
