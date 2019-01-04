@@ -207,18 +207,22 @@ are side by side in a row flexbox.  */
 .lecture{
   background-color: gainsboro;
 }
+
+
+
 /**** Start Learning Section ***/
 
 .learning{
   background-color: rgb(234,235,236);
-  border: 2px solid rgb(234,235,236);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem;
+
 }
 
 .learning h1{
   margin-top: 2rem;
-  margin-bottom: 2rem;
   text-align: center;
   font-size: 3rem;
   color: darkslategrey;
@@ -227,12 +231,60 @@ are side by side in a row flexbox.  */
 
 .top-class-set{
   display: flex;
-  border: 2px solid red;
+  flex-direction: row;
 }
 .bottom-class-set{
   display: flex;
-    border: 2px solid blue;
+  flex-direction: row;
 }
+
+.subject{
+  background-color: whitesmoke;
+
+  padding-bottom: 1.5rem;
+  background-color: whitesmoke;
+}
+
+.software-engineering, .data{
+  margin-right: 16px;
+  margin-bottom: 32px;
+
+}
+
+.computer-art, .business{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 32px;
+}
+
+.design, .marketing{
+  margin-left: 1rem;
+  margin-right: 0;
+  margin-bottom: 32px;
+}
+.subject h2{
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+
+.subject h3{
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: slategray;
+}
+
+.subject p{
+  margin-left: 1rem;
+  color: slategray;
+  font-size: 1.5rem;
+  margin-top:.5rem;
+  margin-bottom: .5rem;
+}
+
+
+
+
 
 /** Thesis Exhibit Section */
 .thesis video{
