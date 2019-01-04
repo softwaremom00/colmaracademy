@@ -113,13 +113,13 @@ are side by side in a row flexbox.  */
  width: 100%;
  display:flex;
  justify-content: space-between;
- border: 2px solid red;
+
  background-color: whitesmoke;
  color: darkslategrey;
 
 }
 .information-main{
-  border: 1px solid blue;
+
   padding: 0;
   width: 60%;
   display: flex;
@@ -130,7 +130,7 @@ are side by side in a row flexbox.  */
   width: 94%;           /* ISSUE.. in spec it says this should be 60% cannot get that to work..
                         made my other column 40% and this column should be 60%.. if I make img 100% it overflows*/
   padding: 1.5rem 2rem;
-  border: 1px solid red;
+
   margin: 0;
 }
 
