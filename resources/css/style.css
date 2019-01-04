@@ -113,43 +113,99 @@ are side by side in a row flexbox.  */
  width: 100%;
  display:flex;
  justify-content: space-between;
-  border: 2px solid red;
+ border: 2px solid red;
+ background-color: whitesmoke;
+ color: darkslategrey;
+
 }
 .information-main{
-  width: 62%;
   border: 1px solid blue;
+  padding: 0;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .information-main img{
-  width:95%;
-  margin: 1.5rem 2rem;
+  width: 94%;           /* ISSUE.. in spec it says this should be 60% cannot get that to work..
+                        made my other column 40% and this column should be 60%.. if I make img 100% it overflows*/
+  padding: 1.5rem 2rem;
+  border: 1px solid red;
+  margin: 0;
 }
 
+.information-main h1{
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  padding-left: 1.5rem;
+  width: 94%;
 
+}
+
+.information-main p{
+  font-size: 1.5rem;
+  padding-left: 1.5rem;
+  width: 94%;
+
+}
+.quote {
+  color: slategrey;
+  margin-bottom: 4rem;
+}
+
+.person-quoted{
+  margin-bottom: 2rem;
+}
 /** Start Learning Section **/
 .orientation-campus-lecture{
   display: flex;
   flex-direction: column;
-  width: 38%;
-  margin-top: 2rem;
+  width: 40%;
   margin-left: 1rem;
+  background-color: whitesmoke;
+  color: darkslategrey;
+  padding: 1.5rem 2rem;
+  padding-left: 0;
+  border-left: 2px solid gainsboro;
 }
-.orientation{
+.orientation, .campus, .lecture{
   display: flex;
+  border-bottom: 2px solid gainsboro;
+  background-color: whitesmoke;
+  color: darkslategrey;
 }
-.orientation img{
+.orientation img, .campus img, .lecture img{
   width: 35%;
-  margin-bottom: 1rem;
-  margin-right: 1.5rem;
+  height: auto;
+  margin: 1rem 1rem 1rem 1rem;
 }
-
-.orientation{
+.ocl-text{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.orientation-campus-lecture h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-bottom: .5rem;
+}
+.orientation-campus-lecture h3{
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-left: 1rem;
+  margin-bottom: .5rem;
 }
 
+.orientation-campus-lecture a{
+  color: cornflowerblue;
+  text-decoration: none;
+}
 
-
-
-
+.lecture{
+  background-color: gainsboro;
+}
 
 
 /** Thesis Exhibit Section */
