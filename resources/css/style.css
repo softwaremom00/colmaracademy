@@ -190,18 +190,21 @@ are side by side in a row flexbox.  */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 65%;
 }
 .orientation-campus-lecture h2{
   font-size: 2rem;
   font-weight: bold;
   margin-left: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: .5rem;  /** as per Redline spec */
 }
 .orientation-campus-lecture h3{
   font-size: 1.5rem;
   font-weight: normal;
   margin-left: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: .5rem;  /** as per Redline spec */
+  margin-right: 1rem;
+  line-height: 1.5;
 }
 
 .orientation-campus-lecture a{
@@ -334,7 +337,7 @@ are side by side in a row flexbox.  */
   display: flex;
   flex-direction: column;
   justify-content: space-between;  /** ISSUE: Added this to move the lower photo down so that on large screens it aligns with the bottom*/
-                                  /*** of the video..  The spec does not call for this.. Not sure if I Should take this liberty */
+                                  /*** of the video..  */
   width: 40%;
   margin-left: .75rem;
 }
