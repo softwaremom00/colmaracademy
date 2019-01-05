@@ -165,14 +165,19 @@ are side by side in a row flexbox.  */
   margin-left: 1rem;
   background-color: whitesmoke;
   color: darkslategrey;
-  padding: 2rem 1rem;
-  border-left: 2px solid gainsboro;
+  padding: 2rem 0;  /*** these two lines give me proper spacing and border to the top of container...*/
+  margin: 0 1rem;
+  border-left: 2px solid gainsboro;  
 }
 .orientation, .campus, .lecture{
   display: flex;
   border-bottom: 2px solid gainsboro;
   background-color: whitesmoke;
   color: darkslategrey;
+}
+.campus {
+  margin-top: .125rem;
+  border-top: 2px solid gainsboro;
 }
 .orientation img{
   width: 35%;
