@@ -114,25 +114,21 @@ are side by side in a row flexbox.  */
  width: 100%;
  display:flex;
  justify-content: space-between;
-
  background-color: whitesmoke;
  color: darkslategrey;
-
 }
 .information-main{
-
   padding: 0;
-  width: 60%;
+  margin: 2rem 1.5rem;
+  width: 60%;            /* ISSUE.. This is where  have sized the video to be 60%. Since it is 100% of this container.. */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .information-main img{
-  width: 94%;           /* ISSUE.. in spec it says this should be 60% cannot get that to work..
-                        made my other column 40% and this column should be 60%.. if I make img 100% it overflows*/
-  padding: 1.5rem 2rem;
-
+  width: 100%;           /* ISSUE.. This is where I was having problems.. */
   margin: 0;
+  padding:0;
 }
 
 .information-main h1{
@@ -140,14 +136,15 @@ are side by side in a row flexbox.  */
   margin-bottom: 1.5rem;
   font-size: 3rem;
   padding-left: 1.5rem;
-  width: 94%;
+  width:100%;
 
 }
 
 .information-main p{
   font-size: 1.5rem;
   padding-left: 1.5rem;
-  width: 94%;
+  line-height: 1.5;
+  width: 100%;
 
 }
 .quote {
@@ -159,6 +156,8 @@ are side by side in a row flexbox.  */
   margin-bottom: 2rem;
 }
 
+/**** right side of "Keep Practicing" section ***/
+
 .orientation-campus-lecture{
   display: flex;
   flex-direction: column;
@@ -166,8 +165,7 @@ are side by side in a row flexbox.  */
   margin-left: 1rem;
   background-color: whitesmoke;
   color: darkslategrey;
-  padding: 1.5rem 2rem;
-  padding-left: 0;
+  padding: 2rem 1rem;
   border-left: 2px solid gainsboro;
 }
 .orientation, .campus, .lecture{
@@ -176,10 +174,17 @@ are side by side in a row flexbox.  */
   background-color: whitesmoke;
   color: darkslategrey;
 }
-.orientation img, .campus img, .lecture img{
+.orientation img{
+  width: 35%;
+  height: auto;
+  margin: 0 1rem 1rem 1rem;
+
+}
+.campus img, .lecture img{
   width: 35%;
   height: auto;
   margin: 1rem 1rem 1rem 1rem;
+
 }
 .ocl-text{
   display: flex;
@@ -211,6 +216,12 @@ are side by side in a row flexbox.  */
 
 
 /**** Start Learning Section ***/
+/*** Design is One flex container that is a column  - .learning */
+/*** Title is top element */
+/*** top-class-set is middle element */
+/*** bottom-class-set is bottom element */
+
+/* Each class-set is also a row flex container */
 
 .learning{
   background-color: rgb(234,235,236);
@@ -240,27 +251,26 @@ are side by side in a row flexbox.  */
 
 .subject{
   background-color: whitesmoke;
-
   padding-bottom: 1.5rem;
   background-color: whitesmoke;
 }
 
 .software-engineering, .data{
-  margin-right: 16px;
-  margin-bottom: 32px;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
 
 }
 
 .computer-art, .business{
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .design, .marketing{
   margin-left: 1rem;
   margin-right: 0;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 .subject h2{
   margin-top: 1rem;
@@ -284,6 +294,12 @@ are side by side in a row flexbox.  */
 
 
 /** Thesis Exhibit Section */
+/** Design is thesis is a  column flex container **/
+/** h1 is first element
+/** main-content class is second element*/
+/** main-content is a row flex container that has 2 elements one is the video */
+/** the other is the thesis-sidebar column that includes FISMA and Now-And-Then */
+
 .thesis{
   display:flex;
   flex-direction: column;
@@ -306,7 +322,7 @@ are side by side in a row flexbox.  */
 .thesis video{
   margin-top: 0;
   padding-top: 0;
-  width: 100%;
+  width: 100%;   /* Redline spec -- video is 100% of the width of .video container which is 60%.  1.00 x .6 = .6 */
   background-color: gainsboro;
 }
 .main-content{
@@ -315,6 +331,10 @@ are side by side in a row flexbox.  */
   width: 100%;
 }
 .thesis-sidebar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /** ISSUE: Added this to move the lower photo down so that on large screens it aligns with the bottom*/
+                                  /*** of the video..  The spec does not call for this.. Not sure if I Should take this liberty */
   width: 40%;
   margin-left: .75rem;
 }
@@ -328,7 +348,7 @@ are side by side in a row flexbox.  */
 }
 
 .thesis-sidebar img {
-  width: 35%;
+  width: 35%;    /* from redline spec */
   height: auto;
   margin: 1rem;
 }
