@@ -280,11 +280,13 @@ are side by side in a row flexbox.  */
   margin-top: 1rem;
   margin-left: 1rem;
   font-size: 2rem;
+  color: darkslategray;
 }
 
 .subject h3{
   margin-left: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: normal;
   color: slategray;
 }
 
@@ -365,12 +367,14 @@ are side by side in a row flexbox.  */
 }
 
 .sidebar-text h2{
+  color: darkslategrey;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: .5rem;
 }
 .sidebar-text h3{
   font-size: 1.5rem;
+  color: slategray;
   font-weight: lighter;
   margin-bottom: .5rem;
 }
@@ -385,6 +389,7 @@ are side by side in a row flexbox.  */
 }
 
 .reimagine-urban h2{                    /****ISSUE I need to refactor the h2's into a global h2 ***/
+   color: darkslategrey;
    font-size: 2rem;
    font-weight: bold;
    margin-bottom: .5rem;
@@ -393,6 +398,7 @@ are side by side in a row flexbox.  */
 .reimagine-urban p{
   font-size: 1.3rem;
   margin-right: 2rem;
+  color: slategray;
 }
 /*** Copyright section ***/
 
@@ -400,5 +406,6 @@ footer{
   margin-left: 1.5rem;
   margin-top: 2rem;
   padding-top: 1rem;
+  color: slategray;
   border-top: 2px solid gainsboro;
 }
