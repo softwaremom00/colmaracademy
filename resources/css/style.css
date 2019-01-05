@@ -7,10 +7,6 @@ html {
 }
 
 
-
-
-
-
 /*** Navigation bar at top **/
 nav{
   display: flex;
@@ -167,7 +163,7 @@ are side by side in a row flexbox.  */
   color: darkslategrey;
   padding: 2rem 0;  /*** these two lines give me proper spacing and border to the top of container...*/
   margin: 0 1rem;
-  border-left: 2px solid gainsboro;  
+  border-left: 2px solid gainsboro;
 }
 .orientation, .campus, .lecture{
   display: flex;
