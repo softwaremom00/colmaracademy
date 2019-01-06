@@ -3,7 +3,7 @@
 html {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
-  border-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 
@@ -52,6 +52,27 @@ nav img{
 
 .mobileNav {
   display:none;
+}
+/** media query to hide desktop navbar items ***/
+@media only screen and (max-width: 450px){
+
+/** Hide text for logo **/
+.desktopLogo{
+  display: none;
+}
+/** hide desktop nav **/
+.desktopNav{
+  display:none;
+}
+/** display mobile nave **/
+.mobileNav{
+  display:inline-block;
+}
+nav{
+  justify-content: center;
+}
+
+
 }
 
 /*** The Main Banner.  This includes the image and the banner-text containers. These
@@ -103,6 +124,54 @@ are side by side in a row flexbox.  */
   font-size: 2rem;
   text-align: center;
 }
+
+.mobile .banner{
+  display: none;
+}
+
+/** media query to hide desktop navbar items ***/
+@media only screen and (max-width: 450px){
+
+  .desktop .banner{
+    display:none;
+  }
+
+  .mobile .banner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .banner img{
+    width: 100%;
+    margin:0 0 2rem 0;
+    padding:0;
+  }
+
+.banner-text{
+margin-right: 0;
+}
+
+.banner-text h1{
+   font-size: 2.5rem;
+   margin-left: 1rem;
+}
+.second-heading{
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+}
+ .banner-text h2{
+   margin-left: 1rem;
+   margin-bottom: 0;
+ }
+
+ .startbutton{
+
+   margin: 1.5rem 1rem 2rem 1rem;
+ }
+
+}
+/********************** End of mobile for top banner *************/
 
 /**** Next Section - practicing.. another flexbox that consists of keep practicing and Orientation, campus and  Lecture(a column flexbox) ****/
 
@@ -217,7 +286,38 @@ are side by side in a row flexbox.  */
   background-color: gainsboro;
 }
 
+/**** mobile for keep practicing section */
 
+@media only screen and (max-width: 450px){
+
+/** hide the keep practicing part */
+
+.information-main{
+  display:none;
+}
+
+.orientation-campus-lecture{
+  width: 100%;
+  border-left: none;
+}
+/** change the container  from a row to column flex container */
+.orientation, .campus, .lecture{
+  flex-direction: column;
+  border-bottom: none;
+  border-top: none;
+}
+/*** try to get the photos to look good */
+.orientation-campus-lecture img{
+  height: 60%;
+  width: auto;
+}
+
+.ocl-text{
+
+  width: 100%;
+}
+
+}
 
 /**** Start Learning Section ***/
 /*** Design is One flex container that is a column  - .learning */
@@ -226,6 +326,7 @@ are side by side in a row flexbox.  */
 /*** bottom-class-set is bottom element */
 
 /* Each class-set is also a row flex container */
+
 
 .learning{
   background-color: rgb(234,235,236);
@@ -299,6 +400,54 @@ are side by side in a row flexbox.  */
 }
 
 
+/** turn off mobile learning html */
+.learning.mobile{
+  display:none;
+}
+
+
+/* Add Mobile Learning Section */
+@media only screen and (max-width: 450px){
+
+    .learning.desktop{
+      display:none;
+    }
+
+    .learning.mobile{
+        width: 100%;
+        background-color: rgb(234,235,236);
+      /*  display: flex;
+        flex-direction: column;
+        align-items: stretch;*/
+        display: block;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+      }
+      .learning h1{
+        margin-top: 2rem;
+        padding-top: 1rem;
+        text-align: center;
+        font-size: 3rem;
+        color: darkslategrey;
+        margin-bottom: 1rem;
+      }
+
+
+    .learning.mobile h2{
+        font-weight: normal;
+        font-size: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1rem 0 1.5rem 1rem;
+        background-color: gainsboro;
+        margin-bottom: .5rem;
+    }
+
+}
+
+
+
+
 /** Thesis Exhibit Section */
 /** Design is thesis is a  column flex container **/
 /** h1 is first element
@@ -309,6 +458,7 @@ are side by side in a row flexbox.  */
 .thesis{
   display:flex;
   flex-direction: column;
+  background-color: whitesmoke;
   width: 100%;
 }
 .thesis h1{
@@ -379,7 +529,18 @@ are side by side in a row flexbox.  */
   margin-bottom: .5rem;
 }
 
+/*** mobile for thesis exhibits ***/
 
+@media only screen and (max-width: 450px){
+
+.thesis-sidebar{
+  display: none;
+}
+
+.
+
+
+}
 
 /*** Reimagine Urban Section .. or bottom quote **/
 .reimagine-urban{
