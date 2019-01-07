@@ -48,12 +48,12 @@ nav img{
 }
 
 
-/**** ISSUE Add Media Query to display alternative image li and hide current li ***/
+
 
 .mobileNav {
   display:none;
 }
-/** media query to hide desktop navbar items ***/
+/** media query to hide desktop navbar items and display mobile navbar ***/
 @media only screen and (max-width: 450px){
 
 /** Hide text for logo **/
@@ -529,7 +529,19 @@ margin-right: 0;
   margin-bottom: .5rem;
 }
 
-/*** mobile for thesis exhibits ***/
+@media only screen and (max-width: 450px){
+
+   /*** hide the sidebar ***/
+  .thesis-sidebar{
+    display:none;
+  }
+
+  /*** expand the video to be full width */
+
+
+}
+
+/*** mobile for thesis exhibits and reimagine urban***/
 
 @media only screen and (max-width: 450px){
 
@@ -537,8 +549,13 @@ margin-right: 0;
   display: none;
 }
 
-.
+.video {
+  width: 100%;
+}
 
+  .reimagine-urban{
+    display:none;
+  }
 
 }
 
