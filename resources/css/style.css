@@ -244,17 +244,19 @@ margin-right: 0;
   margin-top: .125rem;
   border-top: 2px solid gainsboro;
 }
-.orientation img{
+/*** not sure if this is a good idea **/
+.ocl-image{
+  display:flex;
   width: 35%;
+ margin: 0rem 1rem 1rem 1rem;
+}
+.orientation img, .campus img, .lecture img{
+  width: 100%;
   height: auto;
-  margin: 0 1rem 1rem 1rem;
 
 }
 .campus img, .lecture img{
-  width: 35%;
-  height: auto;
-  margin: 1rem 1rem 1rem 1rem;
-
+  padding-top: 1rem;
 }
 .ocl-text{
   display: flex;
@@ -299,22 +301,45 @@ margin-right: 0;
 .orientation-campus-lecture{
   width: 100%;
   border-left: none;
+  margin: 0;
 }
 /** change the container  from a row to column flex container */
 .orientation, .campus, .lecture{
   flex-direction: column;
+  align-items: center;
   border-bottom: none;
   border-top: none;
+
 }
+
+.ocl-image{
+  width: 90%;  /** out of proportion at 100%*/
+  justify-content: center;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+
 /*** try to get the photos to look good */
-.orientation-campus-lecture img{
-  height: 60%;
-  width: auto;
-}
 
 .ocl-text{
 
   width: 100%;
+
+}
+.orientation-campus-lecture h3{
+  text-align: left;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  padding-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+
+}
+.orientation-campus-lecture h2{
+  margin-left: 2rem;
+}
+.lecture{
+  background-color: whitesmoke;
 }
 
 }
