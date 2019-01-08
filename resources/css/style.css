@@ -13,13 +13,13 @@ nav{
 
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  height: 4rem;      /*  Redline spec */
   background: white;
   color: black;
 }
 
 .logo{
-  margin-left: 1.5rem;
+  margin-left: 1.5rem;  /* Redline spec */
   display:flex;
   align-items: center;
 }
@@ -32,19 +32,19 @@ nav{
   color: gray;
 }
 nav img{
-  height: 2.5rem; /* Issue .. looks to small at 16px or 2rem */
+  height: 2rem; /* Redline spec -- Issue .. looks to small at 32px or 2rem */
   width: auto;
 }
 
 .header li {
   list-style: none;
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 1rem;   /* Redline Spec */
   font-size: 1.2rem;
 
 }
 .header ul li:last-child{
-  margin-right: 1.5rem;
+  margin-right: 1.5rem;  /* Redline Spec */
 }
 
 
@@ -84,8 +84,8 @@ are side by side in a row flexbox.  */
 }
 
 .banner img{
-  width: 60%;
-  margin: 1.5rem 2rem;
+  width: 60%;                   /** Redline Spec */
+  margin: 2rem 1.5rem;         /** Redline Spec - Top/bottom 32px right/left 24px*/
 }
 
 .banner-text{
@@ -112,17 +112,23 @@ are side by side in a row flexbox.  */
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
-
+/** ISSUE .. add animation here for mouse over */
 .startbutton {
   margin-top: 3rem;
   background: darkslategray;  /* ISSUE this color looks too green but according to a color picker tool it is correct */
   color: white;
   font-weight: bold;
   height: 2.5rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: .5rem;    /** Redline spec - 8px top */
+  padding-bottom: .5rem; /** Redline spec - 8px bottom */
   font-size: 2rem;
   text-align: center;
+  text-decoration: none;
+}
+/*** Issue - Add mouseover animation here */
+.startbutton a{
+  text-decoration: none;
+  color: white;
 }
 
 .mobile .banner{
@@ -166,14 +172,13 @@ margin-right: 0;
  }
 
  .startbutton{
-
    margin: 1.5rem 1rem 2rem 1rem;
  }
 
 }
 /********************** End of mobile for top banner *************/
 
-/**** Next Section - practicing.. another flexbox that consists of keep practicing and Orientation, campus and  Lecture(a column flexbox) ****/
+/**** Next Section - keep practicing.. another flexbox that consists of keep practicing and Orientation, campus and  Lecture(a column flexbox) ****/
 
 .information{
  width: 100%;
@@ -181,44 +186,49 @@ margin-right: 0;
  justify-content: space-between;
  background-color: whitesmoke;
  color: darkslategrey;
+ border: 1px solid green;
 }
 .information-main{
   padding: 0;
-  margin: 2rem 1.5rem;
-  width: 60%;            /* ISSUE.. This is where  have sized the video to be 60%. Since it is 100% of this container.. */
+  margin: 2rem 1.5rem; /* Redline Spec - Top/bottom are 32px rt/left 24px*/
+  width: 60%;            /* Redline Spec -Image width ISSUE.. This is where I have sized the video to be 60%. Since it is 100% of this container.. */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
 }
 .information-main img{
   width: 100%;           /* ISSUE.. This is where I was having problems.. */
-  margin: 0;
   padding:0;
+  margin: 0;
 }
 
 .information-main h1{
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+
+  margin-top: 2rem;   /** Redline spec 32 px*/
+  margin-bottom: 1.5rem;  /** Redline spec bottom margin 24px */
+  padding-bottom: 0;
+  padding-left: 0;
   font-size: 3rem;
-  padding-left: 1.5rem;
   width:100%;
 
 }
 
 .information-main p{
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 0;
   font-size: 1.5rem;
-  padding-left: 1.5rem;
   line-height: 1.5;
   width: 100%;
 
 }
 .quote {
   color: slategrey;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .person-quoted{
-  margin-bottom: 2rem;
+  margin-bottom: 2rem;   /** Redline spec - 32px bottom margin */
 }
 
 /**** right side of "Keep Practicing" section ***/
@@ -226,12 +236,11 @@ margin-right: 0;
 .orientation-campus-lecture{
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin-left: 1rem;
+  width: 40%;           /*** Redline spec width for column is 40% */
   background-color: whitesmoke;
   color: darkslategrey;
-  padding: 2rem 0;  /*** these two lines give me proper spacing and border to the top of container...*/
-  margin: 0 1rem;
+  padding: 2rem 0;  /*** Redline spec 32px top(padding so that border goes to top)..*/
+  margin: 0;
   border-left: 2px solid gainsboro;
 }
 .orientation, .campus, .lecture{
@@ -247,8 +256,9 @@ margin-right: 0;
 /*** not sure if this is a good idea **/
 .ocl-image{
   display:flex;
-  width: 35%;
- margin: 0rem 1rem 1rem 1rem;
+  width: 35%;     /*** Redline spec image width is 35% */
+  height: auto;
+  margin: 0rem 1rem 1rem 1rem; /* Redline spec - images have 1 rem margin.. except for top*/
 }
 .orientation img, .campus img, .lecture img{
   width: 100%;
@@ -256,13 +266,13 @@ margin-right: 0;
 
 }
 .campus img, .lecture img{
-  padding-top: 1rem;
+  padding-top: 1rem;   /* Redline spec 1rem top border for lower 2 images */
 }
 .ocl-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 65%;
+  width: 65%;        /* Redline spec 65% width for text */
 }
 .orientation-campus-lecture h2{
   font-size: 2rem;
@@ -278,7 +288,7 @@ margin-right: 0;
   margin-right: 1rem;
   line-height: 1.5;
 }
-
+/** ISSUE .. add animation here for mouse over */
 .orientation-campus-lecture a{
   color: cornflowerblue;
   text-decoration: none;
@@ -358,12 +368,13 @@ margin-right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 0 4.5rem 2rem 4.5rem;  /** redline spec 72px side margin */
 
 }
 
 .learning h1{
-  margin-top: 2rem;
+  margin-top: 2rem;  /* Redline spec */
+  margin-bottom: 2rem;  /*Redline spec  */
   text-align: center;
   font-size: 3rem;
   color: darkslategrey;
@@ -384,7 +395,7 @@ margin-right: 0;
   padding-bottom: 1.5rem;
   background-color: whitesmoke;
 }
-
+/*** Margins for the course boxes */
 .software-engineering, .data{
   margin-right: 1rem;
   margin-bottom: 2rem;
@@ -396,6 +407,9 @@ margin-right: 0;
   margin-right: 1rem;
   margin-bottom: 2rem;
 }
+.subject img{
+  height:auto;
+}
 
 .design, .marketing{
   margin-left: 1rem;
@@ -403,24 +417,25 @@ margin-right: 0;
   margin-bottom: 2rem;
 }
 .subject h2{
-  margin-top: 1rem;
-  margin-left: 1rem;
+  margin-top: 1rem;    /** From Redline spec */
+  margin-left: 1rem;  /** From Redline spec */
   font-size: 2rem;
   color: darkslategray;
 }
 
 .subject h3{
-  margin-left: 1rem;
+  margin-top: .5rem;
+  margin-left: 1rem; /** From Redline spec */
   font-size: 1.8rem;
   font-weight: normal;
   color: slategray;
 }
 
 .subject p{
-  margin-left: 1rem;
+  margin-left: 1rem; /** From Redline spec */
   color: slategray;
   font-size: 1.5rem;
-  margin-top:.5rem;
+  margin-top:.5rem; /** From Redline spec */
   margin-bottom: .5rem;
 }
 
@@ -488,6 +503,7 @@ margin-right: 0;
 }
 .thesis h1{
   margin-top: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   font-size: 3rem;
   color: darkslategrey;
