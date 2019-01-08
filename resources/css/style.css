@@ -1,12 +1,19 @@
 /* Universal Styles */
 
 html {
-  font-family: Helvetica, sans-serif;
+
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 16px;
   background-color: whitesmoke;
 }
 
+h1{
+    letter-spacing: .1em;
+}
 
+h2{
+  letter-spacing:.05em
+}
 /*** Navigation bar at top **/
 nav{
   display: flex;
@@ -36,19 +43,16 @@ nav img{
   width: auto;
 }
 
-.header li {
+nav li {
   list-style: none;
   display: inline-block;
   margin-right: 1rem;   /* Redline Spec */
   font-size: 1.2rem;
 
 }
-.header ul li:last-child{
+nav ul li:last-child{
   margin-right: 1.5rem;  /* Redline Spec */
 }
-
-
-
 
 .mobileNav {
   display:none;
@@ -129,7 +133,13 @@ are side by side in a row flexbox.  */
 .startbutton a{
   text-decoration: none;
   color: white;
+  transition-property: color;
+  transition-duration: 500ms;
 }
+.startbutton a:hover{
+  color: darkkhaki;
+}
+
 
 .mobile .banner{
   display: none;
@@ -197,7 +207,7 @@ margin-right: 0;
 
 }
 .information-main img{
-  width: 100%;           /* ISSUE.. This is where I was having problems.. */
+  width: 100%;
   padding:0;
   margin: 0;
 }
@@ -292,6 +302,12 @@ margin-right: 0;
 .orientation-campus-lecture a{
   color: cornflowerblue;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 500ms;
+}
+
+.orientation-campus-lecture a:hover{
+  color: darkblue;
 }
 
 .lecture{

@@ -5,23 +5,24 @@
     <title>Colmar Academy</title>
 
     <!-- add new fonts here -->
-
+    <link rel="icon" href="./resources/images/book.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
   </head>
   <body>
-    <nav class="header">
+    <nav>
       <div class="logo">
     <img  src="./resources/images/ic-logo.svg" alt="Colmar Academy Logo"><span class="desktopLogo">COLMAR</span><span class="academy desktopLogo">ACADEMY</span>
     </div>
-      <ul class="desktopNav">
+      <ul class="desktopNav" role="container">
         <li>On Campus</li>
         <li>Online</li>
         <li>or companies</li>
         <li>Sign In</li>
       </ul>
       <!--- mobile navigation --->
-      <ul class="mobileNav">
+      <ul class="mobileNav" role="container">
         <li><img src="./resources/images/ic-online.svg" alt="online icon"></li>
         <li><img src="./resources/images/ic-on-campus.svg" alt="campus icon"></li>
         <li><img src="./resources/images/ic-login.svg" alt="login icon"</li>
@@ -35,7 +36,7 @@
     <div class= "banner">
 
        <img src="./resources/images/banner.jpg" alt="A group of students working on classwork at a table">
-       <div class="banner-text">
+       <div class="banner-text" role="container">
          <h1>Learn Something</h1><h1 class="second-heading">new every day</h1>
          <h2>Lorem ipsum dolor sit amet,</h2><h2>consectetur adipiscing elit.</h2>
          <span class="startbutton"><a href="#">Start Here</a></span>
@@ -43,12 +44,13 @@
      </div> <!-- endof banner div -->
    </div> <!-- end of banner container-->
 
+   <!-- ISSUE need to do this with only CSS and not repeating cod -->
    <div class ="container mobile">
 
     <div class= "banner">
 
        <img src="./resources/images/banner.jpg" alt="A group of students working on classwork at a table">
-       <div class="banner-text">
+       <div class="banner-text" role="container">
          <h1>Learn Something</h1><h1 class="second-heading">new every day</h1>
          <h2>Lorem ipsum dolor sit amet,</h2><h2>consectetur adipiscing elit.</h2>
          <span class="startbutton"><a href="#">Start Here</a></span>
@@ -61,7 +63,7 @@
 
    <div class="container information">
      <!--- ISSUE This is the container for the image file in question -->
-     <div class="information-main">
+     <div class="information-main" role="container">
        <img src="./resources/images/information-main.jpg" alt="student reading a book">
 
        <h1>It doesn't hurt to keep practicing</h1>
@@ -70,13 +72,13 @@
      </div>
 
 
-     <div class="orientation-campus-lecture">
+     <div class="orientation-campus-lecture" role="container">
        <!-- orientation Section -->
        <div class="orientation">
-         <div class="ocl-image">
+         <div class="ocl-image" role="container">
          <img src= "./resources/images/information-orientation.jpg" alt="top view of students walking on path">
         </div>
-       <div class="ocl-text">
+       <div class="ocl-text" role="container">
            <h2>Orientation Date</h2>
            <h3>Tue 10/11 & Wed 10/12: 8am-3pm</h3>
            <h3><a href="#">Read more</a></h3>
@@ -84,10 +86,10 @@
      </div> <!-- end of orientation -->
      <!--- Campus Section --->
      <div class="campus">
-       <div class="ocl-image">
+       <div class="ocl-image" role="container">
        <img src="./resources/images/information-campus.jpg" alt="Students studying in around a table with a map on wall">
        </div>
-       <div class="ocl-text">
+       <div class="ocl-text" role="container">
          <h2>Our Campus</h2>
          <h3>Find which campus is close by you</h3>
          <h3><a href="#">Read more</a></h3>
@@ -95,10 +97,10 @@
      </div> <!-- end of campus section -->
      <!-- guest lecture section  -->
      <div class="lecture">
-          <div class="ocl-image">
+          <div class="ocl-image" role="container">
        <img src="./resources/images/information-guest-lecture.jpg" alt="white bearded man with barret hat and horn rimmed glasses">
          </div>
-       <div class="ocl-text">
+       <div class="ocl-text" role="container">
          <h2>Our guest lecture</h2>
          <h3>Join a keynote with Oliver Sack about music in medical treatment</h3>
          <h3><a href="#">Read more</a></h3>
@@ -110,7 +112,7 @@
  <!--- Start Learning Section ------------------------>
 <div class="container learning desktop">
   <h1>Start learning</h1>
-  <div class="top-class-set">
+  <div class="top-class-set" role="container">
       <div class="subject software-engineering">
         <img src="./resources/images/course-software.jpg" alt="desktop computers on a table">
         <h2>Software engineering</h2>
@@ -130,20 +132,20 @@
         <p>User Experience Design, User</p><p>Research, Visual Design</p>
       </div>
   </div>
-  <div class="bottom-class-set">
+  <div class="bottom-class-set" role="container">
       <div class="subject data">
         <img src="./resources/images/course-data.jpg" alt="Opened laptop on table">
         <h2>Data</h2>
         <h3>COURSES</h3>
         <p>Data Science, Big Data, SQL, Data</p><p>Visualization</p>
       </div>
-      <div class="subject business">
+      <div class="subject business" role="container">
         <img src="./resources/images/course-business.jpg" alt="Chess set on table">
         <h2>Business</h2>
         <h3>COURSES</h3>
         <p>Product Development, Business</p><p>Development, Startup</p>
       </div>
-      <div class="subject marketing">
+      <div class="subject marketing" role="container">
         <img src="./resources/images/course-marketing.jpg" alt="Wrist watch on arm">
         <h2>Marketing</h2>
         <h3>COURSES</h3>
@@ -179,14 +181,14 @@
               Your browser does not support the video tag. Video of Master's Thesis
           </video></p>
           <div class="thesis-sidebar">
-            <div class="thesis-fisma">
+            <div class="thesis-fisma" role="container">
               <img src="./resources/images/thesis-fisma.jpg" alt="hand with phone and papers">
               <div class="sidebar-text">
               <h2>FISMA: Design and Prototype</h2>
               <h3>Designer Showcase of new prototype product</h3>
               </div>
             </div>
-           <div class="thesis-now-and-then">
+           <div class="thesis-now-and-then" role="container">
             <img src="./resources/images/thesis-now-and-then.jpg" alt="skyline of city">
             <div class="sidebar-text">
             <h2>Now and then</h2>
@@ -197,12 +199,12 @@
       </div>  <!--- end of main-content -->
  </div> <!-- end of thesis --->
  <!--- Quote Section ------------------------>
- <div class="container reimagine-urban">
-   <h2> Reimagine Urban</h2>
+ <div class="container reimagine-urban" role="container">
+   <h2>Reimagine Urban</h2>
    <p>"Curabitur vitae liber in ipsum porttitor consequat.  Aliquam et commodo lectus, nec consequat neque.  Sed non accusmsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
  </div>
 
- <footer class="container">
+<footer class="container">
 <p>&copy; 2016 Colmar Academy.  All rights reserved</p>
  </footer>
  <!-- footer section -------->
