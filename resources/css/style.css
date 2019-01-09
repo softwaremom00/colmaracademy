@@ -116,7 +116,7 @@ are side by side in a row flexbox.  */
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
-/** ISSUE .. add animation here for mouse over */
+
 .startbutton {
   margin-top: 3rem;
   background: darkslategray;  /* ISSUE this color looks too green but according to a color picker tool it is correct */
@@ -129,7 +129,7 @@ are side by side in a row flexbox.  */
   text-align: center;
   text-decoration: none;
 }
-/*** Issue - Add mouseover animation here */
+
 .startbutton a{
   text-decoration: none;
   color: white;
@@ -141,21 +141,14 @@ are side by side in a row flexbox.  */
 }
 
 
-.mobile .banner{
-  display: none;
-}
 
-/** media query to hide desktop navbar items ***/
+/** media query for mobile banner  ***/
 @media only screen and (max-width: 450px){
 
-  .desktop .banner{
-    display:none;
-  }
-
-  .mobile .banner{
+   .banner{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100%
   }
 
   .banner img{
@@ -186,7 +179,7 @@ margin-right: 0;
  }
 
 }
-/********************** End of mobile for top banner *************/
+/********************** End of mobile for banner *************/
 
 /**** Next Section - keep practicing.. another flexbox that consists of keep practicing and Orientation, campus and  Lecture(a column flexbox) ****/
 
@@ -263,7 +256,7 @@ margin-right: 0;
   margin-top: .125rem;
   border-top: 2px solid gainsboro;
 }
-/*** not sure if this is a good idea **/
+
 .ocl-image{
   display:flex;
   width: 35%;     /*** Redline spec image width is 35% */
