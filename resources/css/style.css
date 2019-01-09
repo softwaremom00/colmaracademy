@@ -277,27 +277,17 @@ margin-right: 0;
   justify-content: center;
   width: 65%;        /* Redline spec 65% width for text */
 }
-.orientation-campus-lecture h2{
-  font-size: 2rem;
-  font-weight: bold;
-  margin-left: 1rem;
-  margin-bottom: .5rem;  /** as per Redline spec */
-}
+
 .orientation-campus-lecture h3{
   font-size: 1.5rem;
   font-weight: bold;
-  margin-left: 1rem;
-  margin-bottom: .5rem;  /** as per Redline spec */
-  margin-right: 1rem;
-  line-height: 1.5;
+  margin: 0 .5rem .5rem 1rem; /** as per Redline spec */
 }
 
 .ocl-text p{
   font-size: 1.2rem;
   font-weight: normal;
-  margin-left: 1rem;
-  margin-bottom: .5rem;  /** as per Redline spec */
-  margin-right: 1rem;
+  margin: 0 1rem .5rem 1rem;
   line-height: 1.5;
 }
 
@@ -360,8 +350,8 @@ margin-right: 0;
   text-align: left;
   font-size: 1.2rem;
   margin-left: 2rem;
-  padding-left: 0;
   margin-right: 0;
+  padding-left: 0;
   padding-right: 0;
 
 }
@@ -495,7 +485,7 @@ margin-right: 0;
 
     .learning.mobile h2{
         font-weight: normal;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-left: 1rem;
         margin-right: 1rem;
         padding: 1rem 0 1.5rem 1rem;
