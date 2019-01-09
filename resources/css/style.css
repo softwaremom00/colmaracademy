@@ -258,7 +258,7 @@ margin-right: 0;
 }
 
 .ocl-image{
-  display:flex;
+
   width: 35%;     /*** Redline spec image width is 35% */
   height: auto;
   margin: 0rem 1rem 1rem 1rem; /* Redline spec - images have 1 rem margin.. except for top*/
@@ -285,12 +285,23 @@ margin-right: 0;
 }
 .orientation-campus-lecture h3{
   font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-bottom: .5rem;  /** as per Redline spec */
+  margin-right: 1rem;
+  line-height: 1.5;
+}
+
+.ocl-text p{
+  font-size: 1.2rem;
   font-weight: normal;
   margin-left: 1rem;
   margin-bottom: .5rem;  /** as per Redline spec */
   margin-right: 1rem;
   line-height: 1.5;
 }
+
+
 /** ISSUE .. add animation here for mouse over */
 .orientation-campus-lecture a{
   color: cornflowerblue;
@@ -345,16 +356,16 @@ margin-right: 0;
   width: 100%;
 
 }
-.orientation-campus-lecture h3{
+.orientation-campus-lecture p{
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-left: 2rem;
   padding-left: 0;
   margin-right: 0;
   padding-right: 0;
 
 }
-.orientation-campus-lecture h2{
+.orientation-campus-lecture h3{
   margin-left: 2rem;
 }
 .lecture{
