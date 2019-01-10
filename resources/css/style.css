@@ -278,13 +278,19 @@ margin-right: 0;
   width: 65%;        /* Redline spec 65% width for text */
 }
 
-.orientation-campus-lecture h3{
+.orientation-campus-lecture h2{
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 .5rem .5rem 1rem; /** as per Redline spec */
 }
+/*
+.orientation-campus-lecture h3{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 .5rem .5rem 1rem; /** as per Redline spec
+}*/
 
-.ocl-text p{
+.ocl-text h3{
   font-size: 1.2rem;
   font-weight: normal;
   margin: 0 1rem .5rem 1rem;
@@ -292,7 +298,7 @@ margin-right: 0;
 }
 
 
-/** ISSUE .. add animation here for mouse over */
+
 .orientation-campus-lecture a{
   color: cornflowerblue;
   text-decoration: none;
@@ -346,7 +352,7 @@ margin-right: 0;
   width: 100%;
 
 }
-.orientation-campus-lecture p{
+.orientation-campus-lecture h3{
   text-align: left;
   font-size: 1.2rem;
   margin-left: 2rem;
@@ -355,7 +361,7 @@ margin-right: 0;
   padding-right: 0;
 
 }
-.orientation-campus-lecture h3{
+.orientation-campus-lecture h2{
   margin-left: 2rem;
 }
 .lecture{
@@ -540,7 +546,7 @@ margin-right: 0;
 .thesis-sidebar{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;  /** ISSUE: Added this to move the lower photo down so that on large screens it aligns with the bottom*/
+  justify-content:flex-start;  /** ISSUE: Added this to move the lower photo down so that on large screens it aligns with the bottom*/
                                   /*** of the video..  */
   width: 40%;
   margin-left: .75rem;
@@ -554,11 +560,19 @@ margin-right: 0;
   display:flex;
 }
 
-.thesis-sidebar img {
-  width: 35%;    /* from redline spec */
+.thesis-image{
+  width: 35%;     /*** Redline spec image width is 35% */
   height: auto;
-  margin: 1rem;
+  padding: 1rem;
 }
+
+.thesis-sidebar img {
+  width: 100%;    /* from redline spec */
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
 
 .sidebar-text{
   display: flex;
@@ -569,14 +583,16 @@ margin-right: 0;
 
 .sidebar-text h2{
   color: darkslategrey;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
+
   margin-bottom: .5rem;
 }
 .sidebar-text h3{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: slategray;
   font-weight: lighter;
+
   margin-bottom: .5rem;
 }
 
