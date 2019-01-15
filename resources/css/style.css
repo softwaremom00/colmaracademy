@@ -58,7 +58,9 @@ nav ul li:last-child{
   display:none;
 }
 /** media query to hide desktop navbar items and display mobile navbar ***/
-/*** ISSUE The spacing looks too tight for the icons */
+
+
+
 @media only screen and (max-width: 450px){
 
 
@@ -74,6 +76,17 @@ nav ul li:last-child{
 .mobileNav{
   display:inline-block;
 }
+
+.mobileNav a{
+  transition-property: opacity;
+  transition-duration: 500ms;
+}
+
+.mobileNav a:hover{
+  opacity: .5;
+}
+
+
 nav{
   justify-content: center;
 }
@@ -142,7 +155,26 @@ are side by side in a row flexbox.  */
   color: darkkhaki;
 }
 
+@media only screen and (max-width: 1200px)
+{
+  .banner img{
+    margin: 1rem;         /** Redline Spec - Top/bottom 32px right/left 24px*/
+  }
+}
 
+@media only screen and (max-width: 1000px)
+{
+.banner{
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.banner img{
+  width: 100%;
+  margin:0 0 2rem 0;
+  padding:0;
+}
+}
 
 /** media query for mobile banner  ***/
 @media only screen and (max-width: 450px){
@@ -285,12 +317,7 @@ margin-right: 0;
   font-weight: bold;
   margin: 0 .5rem .5rem 1rem; /** as per Redline spec */
 }
-/*
-.orientation-campus-lecture h3{
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0 .5rem .5rem 1rem; /** as per Redline spec
-}*/
+
 
 .ocl-text h3{
   font-size: 1.2rem;
@@ -315,8 +342,26 @@ margin-right: 0;
 .lecture{
   background-color: gainsboro;
 }
+/*** Stacking text and photos at 1200px for better readability */
+@media only screen and (max-width: 1200px){
+
+  .orientation, .campus, .lecture{
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+    border-top: none;
+
+  }
+  .ocl-image{
+    width: 65%;  /** out of proportion at 100%*/
+    justify-content: center;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+
+}
 
 /**** mobile for keep practicing section */
+
 
 @media only screen and (max-width: 450px){
 
@@ -399,41 +444,46 @@ margin-right: 0;
 
 }
 
-.top-class-set{
+.class-set{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+/* ISSUE: from previous model where I had 2 rows.. */
 .bottom-class-set{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
 }
 
 .subject{
   background-color: whitesmoke;
   padding-bottom: 1.5rem;
   background-color: whitesmoke;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 /*** Margins for the course boxes */
-.software-engineering, .data{
-  margin-right: 1rem;
-  margin-bottom: 2rem;
 
+.software-engineering, .data{
 }
 
 .computer-art, .business{
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 2rem;
+
 }
+
+.design, .marketing{
+
+}
+
 .subject img{
   height:auto;
 }
 
-.design, .marketing{
-  margin-left: 1rem;
-  margin-right: 0;
-  margin-bottom: 2rem;
-}
 .subject h2{
   margin-top: 1rem;    /** From Redline spec */
   margin-left: 1rem;  /** From Redline spec */
@@ -461,6 +511,37 @@ margin-right: 0;
 /** turn off mobile learning html */
 .learning.mobile{
   display:none;
+}
+@media only screen and (max-width: 1300px){
+
+  /** at this point would like images to shrink a bit so we can still have 2 columns*/
+  .subject {
+    width: 40%;
+    text-align: center;
+  }
+
+  .subject img{
+    width: 95%;
+    height:auto;
+
+  }
+
+}
+
+@media only screen and (max-width: 850px){
+
+  /** at this point would like subjects to stack one on top of the other*/
+  .subject {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subject img{
+    width: 100%;
+    height:auto;
+
+  }
+
 }
 
 
@@ -597,6 +678,29 @@ margin-right: 0;
 
   margin-bottom: .5rem;
 }
+
+/*** stack text */
+@media only screen and (max-width: 1200px){
+
+
+    .thesis-now-and-then, .thesis-fisma{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+    .sidebar-text h2{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .thesis-image{
+      width: 65%;  /** out of proportion at 100%*/
+      justify-content: center;
+      margin: .5rem;
+    }
+
+}
+
 
 @media only screen and (max-width: 450px){
 
