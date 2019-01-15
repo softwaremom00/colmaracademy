@@ -39,7 +39,7 @@ nav{
   color: gray;
 }
 nav img{
-  height: 2rem; /* Redline spec -- Issue .. looks to small at 32px or 2rem */
+  height: 2rem; /* Redline spec --  */
   width: auto;
 }
 
@@ -58,7 +58,9 @@ nav ul li:last-child{
   display:none;
 }
 /** media query to hide desktop navbar items and display mobile navbar ***/
+/*** ISSUE The spacing looks too tight for the icons */
 @media only screen and (max-width: 450px){
+
 
 /** Hide text for logo **/
 .desktopLogo{
@@ -94,7 +96,7 @@ are side by side in a row flexbox.  */
 
 .banner-text{
   display: flex;
-  color: darkslategray;/*#3B2921;*/
+  color: darkslategray;
   flex-direction: column;
   justify-content: center;
   margin-right: 3rem;
@@ -639,7 +641,7 @@ margin-right: 0;
    font-weight: bold;
    margin-bottom: .5rem;
  }
-                                     /**** ISSUE I need to work on color for this section and footer ***/
+
 .reimagine-urban p{
   font-size: 1.3rem;
   margin-right: 2rem;
