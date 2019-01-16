@@ -153,7 +153,7 @@ are side by side in a row flexbox.  */
 
 .startbutton {
   margin-top: 3rem;
-  background: darkslategray;  /* ISSUE this color looks too green but according to a color picker tool it is correct */
+  background: darkslategray;
   color: white;
   font-weight: bold;
   height: 2.5rem;
@@ -637,7 +637,7 @@ are side by side in a row flexbox.  */
 .thesis-sidebar{
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;  /** ISSUE: Added this to move the lower photo down so that on large screens it aligns with the bottom*/
+  justify-content:flex-start;  /** Added this to move the lower photo down so that on large screens it aligns with the bottom*/
                                   /*** of the video..  */
   width: 40%;
   margin-left: .75rem;
@@ -746,7 +746,7 @@ are side by side in a row flexbox.  */
   margin-top: 1.5rem;
 }
 
-.reimagine-urban h2{                    /****ISSUE I need to refactor the h2's into a global h2 ***/
+.reimagine-urban h2{                   
    color: darkslategrey;
    font-size: 2rem;
    font-weight: bold;
