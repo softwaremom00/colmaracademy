@@ -448,7 +448,7 @@ margin-right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 4.5rem 2rem 4.5rem;  /** redline spec 72px side margin */
+  padding: 0 4.5rem 2rem 4.5rem;  /** redline spec 72px side margin = 4.5rem */
 
 }
 
@@ -472,7 +472,6 @@ margin-right: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   justify-content: center;
 }
 
@@ -483,8 +482,9 @@ margin-right: 0;
   margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  width: 30%;  /* adding this for smaller full width 3 rows */
 }
-/*** Margins for the course boxes */
+
 
 .software-engineering, .data{
 }
@@ -498,6 +498,7 @@ margin-right: 0;
 }
 
 .subject img{
+  width: 100%;
   height:auto;
 }
 
@@ -529,16 +530,16 @@ margin-right: 0;
 .learning.mobile{
   display:none;
 }
-@media only screen and (max-width: 1300px){
+@media only screen and (max-width: 1200px){
 
   /** at this point would like images to shrink a bit so we can still have 2 columns*/
   .subject {
-    width: 40%;
+    width:40%;
     text-align: center;
   }
 
   .subject img{
-    width: 95%;
+    width: 100%;
     height:auto;
 
   }
