@@ -190,7 +190,7 @@ are side by side in a row flexbox.  */
 .banner{
   flex-direction: column;
   align-items: center;
-  margin-top: 1.5rem; /* ISSUE added 1 rem top margin back for ipad/mobile */
+  margin-top: 0; 
   width: 100%;
 }
 .banner img{
@@ -198,6 +198,7 @@ are side by side in a row flexbox.  */
   margin:0 0 2rem 0;
   padding:0;
 }
+
 }
 
 /** media query for mobile banner  ***/
@@ -229,7 +230,7 @@ margin-right: 0;
 }
  .banner-text h2{
    margin-left: 1rem;
-   margin-bottom: 0;
+   margin-bottom: .5rem;
  }
 
  .startbutton{
