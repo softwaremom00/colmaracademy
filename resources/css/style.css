@@ -68,15 +68,8 @@ nav ul li:last-child{
 }
 
 
-@media only screen and (max-width: 960px){
-  /* add margin to bottom of navbar*/
-  nav {
-  margin-bottom: 1rem;   /*** might need to remove later for mobile spec */
-}
 
 
-
-}
 /** media query to hide desktop navbar items and display mobile navbar... I am starting this sooner then the
     other mobile content as this looks bad sooner  ***/
 @media only screen and (max-width: 600px){
@@ -94,7 +87,7 @@ nav ul li:last-child{
 nav{
   justify-content: space-around;
   align-items: stretch;
-
+  margin-bottom: 0;
 }
 .mobileNav{
   width: 100%;
@@ -201,6 +194,10 @@ are side by side in a row flexbox.  */
   margin:0 0 2rem 0;
   padding:0;
 }
+.banner-text{
+  margin-left: 1rem;
+}
+
 
 }
 
@@ -210,7 +207,10 @@ are side by side in a row flexbox.  */
    .banner{
     display: flex;
     flex-direction: column;
-    width: 100%
+    align-items: stretch;
+    width: 100%;
+    padding-left: 0;
+
   }
 
   .banner img{
@@ -220,12 +220,15 @@ are side by side in a row flexbox.  */
   }
 
 .banner-text{
-margin-right: 0;
-}
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
 
+}
 .banner-text h1{
    font-size: 2.5rem;
    margin-left: 1rem;
+
 }
 .second-heading{
   margin-top: 1rem;
@@ -237,7 +240,8 @@ margin-right: 0;
  }
 
  .startbutton{
-   margin: 1.5rem 1rem 2rem 1rem;
+
+   margin: 1.5rem 1rem 2rem 1rem; /*** Redline Spec **/
  }
 
 }
