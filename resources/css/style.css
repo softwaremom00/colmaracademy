@@ -66,11 +66,17 @@ nav ul li:last-child{
 .mobileNav {
   display:none;
 }
-/** media query to hide desktop navbar items and display mobile navbar ***/
 
 
+@media only screen and (max-width: 960px){
+  /* add margin to bottom of navbar*/
+  nav li{
+  margin-bottom: 1rem;}
 
-@media only screen and (max-width: 570px){
+}
+/** media query to hide desktop navbar items and display mobile navbar... I am starting this sooner then the
+    other mobile content as this looks bad sooner  ***/
+@media only screen and (max-width: 600px){
 
 
 /** Hide text for logo **/
@@ -194,7 +200,7 @@ are side by side in a row flexbox.  */
 }
 
 /** media query for mobile banner  ***/
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 480px){
 
    .banner{
     display: flex;
@@ -245,7 +251,7 @@ margin-right: 0;
 .information-main{
   padding: 0;
   margin: 2rem 1.5rem; /* Redline Spec - Top/bottom are 32px rt/left 24px*/
-  width: 60%;            /* Redline Spec -Image width ISSUE.. This is where I have sized the video to be 60%. Since it is 100% of this container.. */
+  width: 60%;            /* Redline Spec -Image width  */
   display: flex;
   flex-direction: column;
 
@@ -380,7 +386,7 @@ margin-right: 0;
 /**** mobile for keep practicing section */
 
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 480px){
 
 /** hide the keep practicing part */
 
@@ -408,13 +414,8 @@ margin-right: 0;
   margin: 1rem 1rem 1rem 1rem;
 }
 
-
-/*** try to get the photos to look good */
-
 .ocl-text{
-
   width: 100%;
-
 }
 .orientation-campus-lecture h3{
   text-align: left;
@@ -437,8 +438,8 @@ margin-right: 0;
 /**** Start Learning Section ***/
 /*** Design is One flex container that is a column  - .learning */
 /*** Title is top element */
-/*** top-class-set is middle element */
-/*** bottom-class-set is bottom element */
+/*** class-set is next element */
+
 
 /* Each class-set is also a row flex container */
 
@@ -449,7 +450,6 @@ margin-right: 0;
   flex-direction: column;
   align-items: center;
   padding: 0 4.5rem 2rem 4.5rem;  /** redline spec 72px side margin = 4.5rem */
-
 }
 
 .learning h1{
@@ -467,13 +467,7 @@ margin-right: 0;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* ISSUE: from previous model where I had 2 rows.. */
-.bottom-class-set{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 
 .subject{
   background-color: whitesmoke;
@@ -482,19 +476,7 @@ margin-right: 0;
   margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  width: 30%;  /* adding this for smaller full width 3 rows */
-}
-
-
-.software-engineering, .data{
-}
-
-.computer-art, .business{
-
-}
-
-.design, .marketing{
-
+  width: 30%;  /* for smaller full width browser 3 rows */
 }
 
 .subject img{
@@ -525,17 +507,16 @@ margin-right: 0;
   margin-bottom: .5rem;
 }
 
-
 /** turn off mobile learning html */
 .learning.mobile{
   display:none;
 }
 @media only screen and (max-width: 1200px){
 
-  /** at this point would like images to shrink a bit so we can still have 2 columns*/
+  /** at this point would like containers to look good when you have 2 columns*/
   .subject {
     width:40%;
-    text-align: center;
+
   }
 
   .subject img{
@@ -564,7 +545,7 @@ margin-right: 0;
 
 
 /* Add Mobile Learning Section */
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 480px){
 
     .learning.desktop{
       display:none;
@@ -720,7 +701,7 @@ margin-right: 0;
 }
 
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 480px){
 
    /*** hide the sidebar ***/
   .thesis-sidebar{
@@ -729,12 +710,11 @@ margin-right: 0;
 
   /*** expand the video to be full width */
 
-
 }
 
 /*** mobile for thesis exhibits and reimagine urban***/
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 480px){
 
 .thesis-sidebar{
   display: none;
