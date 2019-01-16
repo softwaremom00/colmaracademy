@@ -190,7 +190,7 @@ are side by side in a row flexbox.  */
 .banner{
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem; /* ISSUE added 1 rem top margin back for ipad/mobile */
+  margin-top: 1.5rem; /* ISSUE added 1 rem top margin back for ipad/mobile */
   width: 100%;
 }
 .banner img{
