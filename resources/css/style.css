@@ -4,7 +4,11 @@ html {
 
   font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 16px;
-  background-color: whitesmoke;
+  background-color: cornsilk; /* Conservative Color Scheme this was whitesmoke*/
+}
+body{
+  margin-left: 0;
+  margin-right: 0;
 }
 
 h1{
@@ -16,6 +20,12 @@ h2{
 }
 /*** Navigation bar at top **/
 nav{
+  /*** to make nav fixed set these values top: 0, margin-top:0, padding-top: 0*/
+  top: 0;
+  margin-top:0;
+  padding-top: 0;
+  position: fixed;
+  width: 100%;
   display: flex;
 
   justify-content: space-between;
@@ -117,8 +127,11 @@ nav{
 are side by side in a row flexbox.  */
 
 .banner{
-  background-color: rgb(216,216,216);
+
+  background-color: #e9dbbd; /* conservative color scheme was rgb(216,216,216);*/
   display: flex;
+  /* for fixed nav need to add margin-top: 4 rem */
+  margin-top: 4rem;
 }
 
 .banner img{
@@ -177,7 +190,8 @@ are side by side in a row flexbox.  */
 @media only screen and (max-width: 1200px)
 {
   .banner img{
-    margin: 1rem;
+    /* for fixed navbar need margin-top 4rem*/
+    margin: 4rem 1rem 1rem 1rem;
   }
 }
 
@@ -186,7 +200,8 @@ are side by side in a row flexbox.  */
 .banner{
   flex-direction: column;
   align-items: center;
-  margin-top: 0;
+/* for fixed navbar need margin-top 4rem*/
+  margin-top: 4rem;
   width: 100%;
 }
 .banner img{
@@ -253,7 +268,7 @@ are side by side in a row flexbox.  */
  width: 100%;
  display:flex;
  justify-content: space-between;
- background-color: whitesmoke;
+ background-color: cornsilk;  /* Conservative color scheme this was whitesmoke */
  color: darkslategrey;
 
 }
@@ -306,16 +321,16 @@ are side by side in a row flexbox.  */
   display: flex;
   flex-direction: column;
   width: 40%;           /*** Redline spec width for column is 40% */
-  background-color: whitesmoke;
+  background-color: cornsilk; /* conservative color scheme was whitesmoke */
   color: darkslategrey;
   padding: 2rem 0;  /*** Redline spec 32px top(padding so that border goes to top)..*/
   margin: 0;
-  border-left: 2px solid gainsboro;
+  border-left: 1.5px solid gainsboro;
 }
 .orientation, .campus, .lecture{
   display: flex;
   border-bottom: 2px solid gainsboro;
-  background-color: whitesmoke;
+  background-color: cornsilk; /* conservative color scheme was whitesmoke */
   color: darkslategrey;
 }
 .campus {
@@ -372,7 +387,7 @@ are side by side in a row flexbox.  */
 }
 
 .lecture{
-  background-color: gainsboro;
+  background-color:#c1a87d; /*gainsboro;*/
 }
 /*** Stacking text and photos at 1200px for better readability */
 @media only screen and (max-width: 1200px){
@@ -414,7 +429,6 @@ are side by side in a row flexbox.  */
   align-items: center;
   border-bottom: none;
   border-top: none;
-
 }
 
 .ocl-image{
@@ -439,7 +453,7 @@ are side by side in a row flexbox.  */
   margin-left: 2rem;
 }
 .lecture{
-  background-color: whitesmoke;
+  background-color: cornsilk; /*conservative color was whitesmoke */
 }
 
 }
@@ -454,7 +468,7 @@ are side by side in a row flexbox.  */
 
 
 .learning{
-  background-color: rgb(234,235,236);
+  background-color:  #e9dbbd; /*rgb(234,235,236);*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -562,13 +576,15 @@ are side by side in a row flexbox.  */
 
     .learning.mobile{
         width: 100%;
-        background-color: rgb(234,235,236);
-      /*  display: flex;
+        background-color:  #e9dbbd;/*rgb(234,235,236);*/
+
+        display: flex;
         flex-direction: column;
-        align-items: stretch;*/
-        display: block;
+        align-content: stretch;
         padding: 0;
-        margin: 0 0 1.5rem 0;
+        margin: 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid darkgray;
       }
       .learning h1{
         margin-top: 2rem;
@@ -581,13 +597,14 @@ are side by side in a row flexbox.  */
 
 
     .learning.mobile h2{
+         width: 90%;
         font-weight: normal;
         font-size: 1.5rem;
         margin-left: 1rem;
         margin-right: 1rem;
         padding: 1rem 0 1.5rem 1rem;
-        background-color: gainsboro;
-        margin-bottom: .5rem;
+        background-color: #cbb682; /* conservative color is gainsboro;*/
+        margin-bottom: 1rem;  /* Redline spec add padding bottom from learning mobile to this for value*/
     }
 
 }
@@ -605,7 +622,7 @@ are side by side in a row flexbox.  */
 .thesis{
   display:flex;
   flex-direction: column;
-  background-color: whitesmoke;
+  background-color: cornsilk; /*conservative color was whitesmoke */
   width: 100%;
 }
 .thesis h1{
@@ -644,7 +661,7 @@ are side by side in a row flexbox.  */
 }
 .thesis-fisma{
   display: flex;
-  background-color: gainsboro;
+  background-color: #c1a87d; /*gainsboro;*/
 }
 
 .thesis-now-and-then{
@@ -687,6 +704,10 @@ are side by side in a row flexbox.  */
   margin-bottom: .5rem;
 }
 
+.thesis-fisma .sidebar-text h3{
+  color: darkslategrey;
+}
+
 /*** stack text */
 @media only screen and (max-width: 1200px){
 
@@ -710,34 +731,7 @@ are side by side in a row flexbox.  */
 }
 
 
-@media only screen and (max-width: 480px){
 
-   /*** hide the sidebar ***/
-  .thesis-sidebar{
-    display:none;
-  }
-
-  /*** expand the video to be full width */
-
-}
-
-/*** mobile for thesis exhibits and reimagine urban***/
-
-@media only screen and (max-width: 480px){
-
-.thesis-sidebar{
-  display: none;
-}
-
-.video {
-  width: 100%;
-}
-
-  .reimagine-urban{
-    display:none;
-  }
-
-}
 
 /*** Reimagine Urban Section .. or bottom quote **/
 .reimagine-urban{
@@ -746,7 +740,7 @@ are side by side in a row flexbox.  */
   margin-top: 1.5rem;
 }
 
-.reimagine-urban h2{                   
+.reimagine-urban h2{
    color: darkslategrey;
    font-size: 2rem;
    font-weight: bold;
@@ -758,6 +752,33 @@ are side by side in a row flexbox.  */
   margin-right: 2rem;
   color: slategray;
 }
+/*** mobile for thesis exhibits and reimagine urban***/
+
+@media only screen and (max-width: 480px){
+
+.thesis-sidebar{
+  display: none;
+}
+
+.thesis h1{
+  margin-top: 2rem;
+  margin-bottom: 1rem; /* Redline Spec margin-top is already 2rem.. */
+}
+
+.video {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1.5rem;  /* as per Redline Spec */
+ }
+
+  .reimagine-urban{
+    display:none;
+  }
+
+}
+
+
 /*** Copyright section ***/
 
 footer{
@@ -766,4 +787,14 @@ footer{
   padding-top: 1rem;
   color: slategray;
   border-top: 2px solid gainsboro;
+}
+@media only screen and (max-width: 480px){
+
+  footer{
+     margin-top: 0;
+     padding-top: 1rem;    /* as per Redline Spec */
+     padding-bottom: 1rem; /* as per Redline Spec */
+     border-width: 0;
+  }
+
 }
