@@ -225,7 +225,6 @@ are side by side in a row flexbox.  */
     align-items: stretch;
     width: 100%;
     padding-left: 0;
-
   }
 
   .banner img{
